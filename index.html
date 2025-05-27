@@ -30,6 +30,140 @@
       scroll-margin-top: 100px;
       position: relative;
     }
+
+   /* OpenRouter Activity Styling */
+   .main-content-container {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .text-slate-11 {
+    color: var(--slate-11, #6e7781);
+  }
+  
+  .bg-input\/60 {
+    background-color: rgba(var(--input, 229, 231, 235), 0.6);
+  }
+  
+  .text-foreground {
+    color: var(--foreground, #0f172a);
+  }
+  
+  .focus\:bg-input:focus {
+    background-color: rgb(var(--input, 229, 231, 235));
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .placeholder\:text-foreground\/30::placeholder {
+    color: rgba(var(--foreground, 15, 23, 42), 0.3);
+  }
+  
+  .shadow-border {
+    box-shadow: 0 0 0 1px rgba(var(--border, 226, 232, 240), 0.5);
+  }
+  
+  .focus\:shadow-inner:focus {
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  }
+  
+  .focus\:outline-none:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  
+  .border-input {
+    border-color: rgb(var(--input, 229, 231, 235));
+  }
+  
+  .bg-background {
+    background-color: var(--background, #fff);
+  }
+  
+  .text-muted-foreground {
+    color: var(--muted-foreground, #64748b);
+  }
+  
+  .ring-offset-background {
+    --tw-ring-offset-color: var(--background, #fff);
+  }
+  
+  .focus\:ring-ring:focus {
+    --tw-ring-color: var(--ring, #94a3b8);
+  }
+  
+  .hover\:bg-muted\/60:hover {
+    background-color: rgba(var(--muted, 241, 245, 249), 0.6);
+  }
+  
+  .hover\:shadow-sm:hover {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  .focus\:ring-1:focus {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+  
+  .bg-muted\/50 {
+    background-color: rgba(var(--muted, 241, 245, 249), 0.5);
+  }
+  
+  .hover\:bg-muted\/50:hover {
+    background-color: rgba(var(--muted, 241, 245, 249), 0.5);
+  }
+  
+  .bg-secondary {
+    background-color: var(--secondary, #f1f5f9);
+  }
+  
+  .shadow-background {
+    box-shadow: 0 4px 6px -1px rgba(var(--background, 255, 255, 255), 0.1), 0 2px 4px -1px rgba(var(--background, 255, 255, 255), 0.06);
+  }
+  
+  .disabled\:opacity-50:disabled {
+    opacity: 0.5;
+  }
+  
+  .hover\:bg-background\/90:hover {
+    background-color: rgba(var(--background, 255, 255, 255), 0.9);
+  }
+  
+  .rotate-180 {
+    --tw-rotate: 180deg;
+    transform: rotate(var(--tw-rotate));
+  }
+  
+  /* Define CSS variables with default values if not already set in your theme */
+  :root {
+    --foreground: 15, 23, 42;
+    --background: 255, 255, 255;
+    --muted: 241, 245, 249;
+    --muted-foreground: 100, 116, 139;
+    --input: 229, 231, 235;
+    --border: 226, 232, 240;
+    --ring: 148, 163, 184;
+    --secondary: 241, 245, 249;
+    --slate-11: #6e7781;
+  }
+  
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground: 229, 231, 235;
+      --background: 15, 23, 42;
+      --muted: 30, 41, 59;
+      --muted-foreground: 148, 163, 184;
+      --input: 51, 65, 85;
+      --border: 51, 65, 85;
+      --ring: 100, 116, 139;
+      --secondary: 30, 41, 59;
+    }
+  }
+</style>
+
     
     /* Nav styling */
     .nav-link { 
@@ -478,15 +612,270 @@
         If you're looking for someone who truly, really <b>knows</b> every major LLM from daily hands-on use, who's got pieces of paper from Musician's Institute, and Berklee College of Music that say I'm proficient in music theory, reading, writing, composition, arrangement, ear training, technique, core styles, and live performance, who toured for a decade and has experience licensing music to prime time, network television, grinding playing bars with no one in them up through playing on warped tour and filling in playing for Macy Gray? I'm your person, hands down.
       </div>
       <div class="graph-block">
-        <div class="flex items-center justify-center text-center p-0 md:p-4 min-h-dvh md:min-h-max bg-background relative">
-          <div class="w-[30rem] max-w-full transform overflow-hidden bg-slate-1 border py-4 text-left align-middle shadow-xl transition-all px-2 pb-2 pt-4 md:p-6 rounded-none md:rounded-lg md:w-screen md:max-w-screen-lg min-h-dvh md:min-h-max" id="headlessui-dialog-panel-«r23»" data-headlessui-state="open" data-open="" style=""><button class="inline-flex items-center justify-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 text-muted-foreground hover:bg-accent hover:text-accent-foreground h-6 w-6 absolute right-0.5 top-0.5 rounded-md"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 text-slate-9"><path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path></svg></button><h3 class="text-center" id="headlessui-dialog-title-«r24»" data-headlessui-state="open" data-open="">Model Spend</h3>
-          <div class="h-4"></div>
-          <div class="relative z-20 h-80 rounded-t-md border-x border-t md:p-4">
-            <div class="recharts-responsive-container z-10 w-full" style="width: 100%; height: 320px; min-width: 0px;">
-              <div class="recharts-wrapper group" style="position: relative; cursor: default; width: 100%; height: 100%; max-height: 512px; max-width: 1024px;">
-                <svg class="recharts-surface" width="1024" height="512" viewBox="0 0 1024 512" style=...eckbox])]:pr-0 [&amp;>[role=checkbox]]:translate-y-[2px] hidden text-right md:table-cell">2.5</td><td class="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;>[role=checkbox]]:translate-y-[2px] hidden text-right md:table-cell">0.346</td><td class="p-2 align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;>[role=checkbox]]:translate-y-[2px] hidden text-right md:table-cell">3.8</td></tr>
+        <div class="flex items-center justify-center text-center p-0 md:p-4 min-h-80 md:min-h-max bg-background relative">
+          <!-- Begin OpenRouter Activity Content -->
+          <div class="text-slate-11 relative flex w-full max-w-6xl flex-col gap-4 main-content-container">
+            <h1 class="relative flex self-center text-center">Your Activity<span class="absolute -right-1 translate-x-full"><button class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 text-muted-foreground hover:bg-accent hover:text-accent-foreground h-6 transition-all duration-200 ease-in-out active:opacity-80 link w-6"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="h-4 w-4 ease-in-out active:animate-spin"><path fill-rule="evenodd" d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z" clip-rule="evenodd"></path></svg></button></span></h1>
+            <h3 class="text-center">See how you've been using models on OpenRouter. Privacy<!-- --> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="inline-block inline h-4 w-4 text-muted-foreground" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-«Rq7mrrqjb»" data-state="closed"><path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"></path></svg></h3>
+            
+            <div class="pt-6">
+              <div class="md-hidden">
+                <div class="flex flex-wrap items-center justify-end gap-2 md:justify-between mb-2">
+                  <div class="flex flex-row items-center justify-center gap-1 text-sm md:gap-2 md:text-xs">
+                    From:<input class="w-full appearance-none bg-input/60 px-3 py-2 text-foreground transition duration-150 ease-in-out focus:bg-input rounded-lg placeholder:text-foreground/30 shadow-border focus:shadow-inner focus:outline-none" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" type="date" value="2025-04-27"/>
+                    To:<input class="w-full appearance-none bg-input/60 px-3 py-2 text-foreground transition duration-150 ease-in-out focus:bg-input rounded-lg placeholder:text-foreground/30 shadow-border focus:shadow-inner focus:outline-none" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" type="date" value="2025-05-27"/>
+                  </div>
+                  <div class="flex gap-2">
+                    <button class="justify-center font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring flex items-center gap-1.5 h-9 md:h-8 w-auto rounded-full border px-3 py-2 text-sm md:text-xs whitespace-nowrap border-input bg-background text-muted-foreground ring-offset-background focus:ring-ring hover:bg-muted/60 hover:shadow-sm shadow-none transition-colors focus:outline-none focus:ring-1" title="Filter by Model, Provider, or API Key" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-«R6d7mrrqjb»" data-state="closed">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z"></path>
+                      </svg>Filters
+                    </button>
+                    <button class="justify-center font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring hover:text-accent-foreground flex items-center gap-1.5 h-9 md:h-8 w-auto rounded-full border px-3 py-2 text-sm md:text-xs whitespace-nowrap border-input bg-background text-muted-foreground ring-offset-background focus:ring-ring hover:bg-muted/60 hover:shadow-sm shadow-none transition-colors focus:outline-none focus:ring-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m.75 12 3 3m0 0 3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"></path>
+                      </svg>Export
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Transaction Table -->
+              <div class="mt-4 w-full overflow-auto max-h-96 border rounded-lg">
+                <table class="w-full">
+                  <thead class="bg-muted/50 sticky top-0">
+                    <tr class="border-b">
+                      <th class="p-2 text-left whitespace-nowrap">Model</th>
+                      <th class="p-2 text-left whitespace-nowrap">Provider</th>
+                      <th class="p-2 text-left whitespace-nowrap">App</th>
+                      <th class="p-2 text-right whitespace-nowrap">Date</th>
+                      <th class="p-2 text-right whitespace-nowrap">Prompt Tokens</th>
+                      <th class="p-2 text-right whitespace-nowrap">Completion Tokens</th>
+                      <th class="p-2 text-right whitespace-nowrap">Total Tokens</th>
+                      <th class="p-2 text-right whitespace-nowrap">Usage ($)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">arcee-ai/caller-large</td>
+                      <td class="p-2 text-left whitespace-nowrap">Together</td>
+                      <td class="p-2 text-left whitespace-nowrap">OpenRouter: Chatroom</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 13:08:10</td>
+                      <td class="p-2 text-right whitespace-nowrap">16,618</td>
+                      <td class="p-2 text-right whitespace-nowrap">1,552</td>
+                      <td class="p-2 text-right whitespace-nowrap">18,170</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0117</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">inception/mercury-coder-small-beta</td>
+                      <td class="p-2 text-left whitespace-nowrap">Inception</td>
+                      <td class="p-2 text-left whitespace-nowrap">OpenRouter: Chatroom</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 13:03:50</td>
+                      <td class="p-2 text-right whitespace-nowrap">16,253</td>
+                      <td class="p-2 text-right whitespace-nowrap">10,222</td>
+                      <td class="p-2 text-right whitespace-nowrap">26,475</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0157</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 11:07:58</td>
+                      <td class="p-2 text-right whitespace-nowrap">79,933</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,203</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,136</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 11:06:54</td>
+                      <td class="p-2 text-right whitespace-nowrap">79,752</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,283</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,035</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 11:05:45</td>
+                      <td class="p-2 text-right whitespace-nowrap">79,664</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,270</td>
+                      <td class="p-2 text-right whitespace-nowrap">81,934</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 11:04:43</td>
+                      <td class="p-2 text-right whitespace-nowrap">79,724</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,275</td>
+                      <td class="p-2 text-right whitespace-nowrap">81,999</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 11:03:19</td>
+                      <td class="p-2 text-right whitespace-nowrap">79,629</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,287</td>
+                      <td class="p-2 text-right whitespace-nowrap">81,916</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 11:02:13</td>
+                      <td class="p-2 text-right whitespace-nowrap">79,735</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,281</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,016</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 11:00:41</td>
+                      <td class="p-2 text-right whitespace-nowrap">79,799</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,285</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,084</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 10:59:27</td>
+                      <td class="p-2 text-right whitespace-nowrap">79,475</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,199</td>
+                      <td class="p-2 text-right whitespace-nowrap">81,674</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 10:58:18</td>
+                      <td class="p-2 text-right whitespace-nowrap">79,727</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,242</td>
+                      <td class="p-2 text-right whitespace-nowrap">81,969</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 10:57:14</td>
+                      <td class="p-2 text-right whitespace-nowrap">79,940</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,275</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,215</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 10:56:00</td>
+                      <td class="p-2 text-right whitespace-nowrap">79,988</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,261</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,249</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 10:54:52</td>
+                      <td class="p-2 text-right whitespace-nowrap">80,051</td>
+                      <td class="p-2 text-right whitespace-nowrap">688</td>
+                      <td class="p-2 text-right whitespace-nowrap">80,739</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 10:54:05</td>
+                      <td class="p-2 text-right whitespace-nowrap">80,373</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,268</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,641</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 10:52:23</td>
+                      <td class="p-2 text-right whitespace-nowrap">80,217</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,284</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,501</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 10:50:55</td>
+                      <td class="p-2 text-right whitespace-nowrap">80,257</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,288</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,545</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 10:49:47</td>
+                      <td class="p-2 text-right whitespace-nowrap">80,265</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,283</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,548</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 10:48:26</td>
+                      <td class="p-2 text-right whitespace-nowrap">80,285</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,287</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,572</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                    <tr class="border-b hover:bg-muted/50">
+                      <td class="p-2 text-left whitespace-nowrap">deepseek/deepseek-chat-v3-0324:free</td>
+                      <td class="p-2 text-left whitespace-nowrap">Chutes</td>
+                      <td class="p-2 text-left whitespace-nowrap">Roo Code</td>
+                      <td class="p-2 text-right whitespace-nowrap">May 27, 2025 10:47:25</td>
+                      <td class="p-2 text-right whitespace-nowrap">80,197</td>
+                      <td class="p-2 text-right whitespace-nowrap">2,243</td>
+                      <td class="p-2 text-right whitespace-nowrap">82,440</td>
+                      <td class="p-2 text-right whitespace-nowrap">0.0000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div class="sticky bottom-10 z-30 mx-auto flex w-28 justify-center gap-4 rounded-lg bg-secondary p-2 shadow-lg shadow-background">
+              <button disabled="" class="disabled:opacity-50 h-6 w-6 rounded bg-background hover:bg-background/90">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="m-auto h-4 w-4">
+                  <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              1
+              <button class="disabled:opacity-50 h-6 w-6 rounded bg-background hover:bg-background/90">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="m-auto h-4 w-4 rotate-180">
+                  <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd"></path>
+                </svg>
+              </button>
             </div>
           </div>
+          <!-- End OpenRouter Activity Content -->
         </div>
         <div class="pt-3 pb-1 text-sm text-right text-primary-yellow">
           <i class="fas fa-check-circle"></i> 100% Real. Not AI-generated. Not even this blurb!
@@ -495,6 +884,7 @@
     </div>
   </div>
 </section>
+
 
   <!-- MUSIC -->
   <section id="music" class="py-20 px-4 sm:px-6 lg:px-8 fade-in" style="background: var(--secondary-dark);">
